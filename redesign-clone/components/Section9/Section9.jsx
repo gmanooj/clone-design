@@ -14,9 +14,9 @@ export default function Section9({ className = "" }) {
     <section
       id="booking"
       aria-label="Schedule an Intake Call"
-      className={`relative w-full bg-[#FBF9F6] overflow-hidden min-h-[66vh] flex items-center ${className}`}
+      className={`relative w-full bg-secondary overflow-hidden min-h-0 lg:min-h-[66vh] flex items-center ${className}`}
     >
-      <div className="w-full px-6 py-12 md:px-0 md:py-[95.04px]">
+      <div className="w-full px-6 py-10 md:px-8 md:py-10 lg:px-0 lg:py-[95.04px]">
         <div className="w-full">
           <div className="fluid-grid-sec9 w-full">
 
@@ -24,10 +24,10 @@ export default function Section9({ className = "" }) {
             <div className="sec9-media-left w-full h-full">
               <ImageReveal direction="up" className="relative w-full h-full min-h-0 overflow-hidden">
                 <Image
-                  src="/images/sections/office-grounding-space.webp"
-                  alt="Serene Santa Monica therapy consultation space with warm wood and natural coastal textures"
+                  src="/images/sections/cta-sanctuary-detail.jpg"
+                  alt="Armchair with linen cushions and eucalyptus vase beside a warm textured wall"
                   fill
-                  sizes="(max-width: 768px) 70vw, 20vw"
+                  sizes="(max-width: 1024px) 70vw, 20vw"
                   className="object-cover object-center block"
                 />
                 <div className="media-overlay" />
@@ -37,8 +37,8 @@ export default function Section9({ className = "" }) {
             {/* Eyebrow */}
             <div className="sec9-eyebrow-block">
               <div className="h-full flex flex-col justify-start md:justify-center">
-                <p className="font-sans text-[11px] sm:text-[14px] font-medium tracking-[0.14em] uppercase text-brand-accent m-0 mb-2">
-                  TAKE THE FIRST STEP
+                <p className="font-sans text-[11px] sm:text-[14px] font-medium tracking-[0.14em] uppercase text-accent m-0 mb-2">
+                  Take the first step
                 </p>
               </div>
             </div>
@@ -46,15 +46,14 @@ export default function Section9({ className = "" }) {
             {/* Heading */}
             <div className="sec9-headline-block">
               <div className="h-full flex flex-col justify-start">
-                <h2 className="font-heading font-light text-[26px] sm:text-[36px] md:text-[47.8px] leading-[1.25] tracking-[-0.01em] text-brand-heading m-0 mb-4">
-                  Ready to move out of survival mode and reclaim your{" "}
+                <h2 className="font-heading font-light text-[26px] sm:text-[34px] md:text-[40px] lg:text-[47.8px] leading-[1.25] tracking-[-0.01em] text-ink m-0 mb-4">
+                  Ready to slow down and{" "}
                   <span
                     style={{ fontFamily: "var(--font-wedding-day), 'WeddingdayPersonal', cursive" }}
-                    className="font-normal text-[#C37F66] inline-block ml-1 text-[1.3em] md:text-[1.45em] leading-none transform translate-y-[2px] md:translate-y-[4px]"
+                    className="font-normal text-accent inline-block ml-1 text-[1.45em] md:text-[1.6em] leading-none transform translate-y-[2px] md:translate-y-[4px]"
                   >
-                    energy
+                    reconnect?
                   </span>
-                  ?
                 </h2>
               </div>
             </div>
@@ -62,8 +61,8 @@ export default function Section9({ className = "" }) {
             {/* Body Copy */}
             <div className="sec9-text-block">
               <div className="h-full flex flex-col justify-start">
-                <p className="font-body font-light text-[14px] sm:text-[16.7px] leading-[1.7] text-brand-heading m-0 mb-6">
-                  Whether you meet in person in Santa Monica or online across California, let&apos;s collaborate to build sustainable resilience and peace.
+                <p className="font-body font-light text-[14px] sm:text-[15.5px] lg:text-[16.7px] leading-[1.7] text-ink m-0 mb-6">
+                  Whether we meet in person in Santa Monica or online across California, I may be a good fit if you want practical tools combined with depth-oriented work.
                 </p>
               </div>
             </div>
@@ -73,24 +72,24 @@ export default function Section9({ className = "" }) {
               <div className="h-full flex flex-col justify-center md:justify-start items-center md:items-start w-full">
                 <Link
                   href="#booking"
-                  className="btn-sharp-filled inline-block w-full sm:w-auto text-center py-4 px-6 text-[12px] tracking-[0.14em] uppercase font-medium bg-[#C37F66] text-white rounded-full shadow-sm transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[#B26F57] hover:-translate-y-[2px] active:translate-y-0 cursor-pointer"
+                  className="btn-sharp-filled inline-block w-full sm:w-auto text-center py-4 px-8 text-[12.5px] sm:text-[13px] tracking-[0.14em] uppercase font-semibold bg-primary text-on-primary border-2 border-primary rounded-none shadow-sm transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-primary-hover hover:border-primary-hover hover:-translate-y-[2px] active:translate-y-0 cursor-pointer"
                 >
-                  SCHEDULE A 15-MINUTE CONSULTATION
+                  Schedule a consultation
                 </Link>
-                <p className="font-sans text-[11px] sm:text-[12.5px] text-brand-sage tracking-[0.03em] mt-3.5 text-center md:text-left">
-                  Complimentary 15-minute consultation &bull; No obligation &bull; Confidential &amp; HIPAA-compliant
+                <p className="font-sans text-[11px] sm:text-[12.5px] text-muted tracking-[0.03em] mt-3.5 text-center md:text-left">
+                  In-person in Santa Monica &bull; Secure telehealth in California
                 </p>
               </div>
             </div>
 
-            {/* Right Media Feature (Reveals opposite top-to-bottom, aspect-4/3 on mobile) */}
+            {/* Right Media Feature (Reveals opposite top-to-bottom, aspect-4/3 on mobile/tablet) */}
             <div className="sec9-media-right w-full h-full">
-              <ImageReveal direction="down" delay={140} className="relative w-full aspect-[4/3] md:aspect-auto md:h-full min-h-0 overflow-hidden mt-8 md:mt-0">
+              <ImageReveal direction="down" delay={140} className="relative w-full aspect-[4/3] md:aspect-[4/3] lg:aspect-auto lg:h-full min-h-0 overflow-hidden mt-8 md:mt-0">
                 <Image
                   src="/images/sections/booking-warm-stone.webp"
-                  alt="Mindful journal, handmade ceramic cup, and grounding stone on warm oak in morning light"
+                  alt="Journal, ceramic cup, and grounding stone on an oak table in morning light"
                   fill
-                  sizes="(max-width: 768px) 100vw, 40vw"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover block"
                   style={{ objectPosition: "50% 50%" }}
                 />

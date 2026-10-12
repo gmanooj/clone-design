@@ -1,17 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import NavDropdown from "./NavDropdown";
 import MobileDrawer from "./MobileDrawer";
-import PillButton from "@/components/common/PillButton";
 
 const practiceLinks = [
-  { name: "About Dr. Reynolds", href: "/about" },
-  { name: "Santa Monica Sanctuary", href: "/office" },
-  { name: "California Telehealth", href: "/telehealth" },
-  { name: "Practice Policies & Fees", href: "/faqs" },
+  { name: "About Dr. Reynolds", href: "#about" },
+  { name: "Santa Monica Sanctuary", href: "#office" },
+  { name: "California Telehealth", href: "#office" },
+  { name: "Practice Policies & FAQs", href: "#faqs" },
 ];
 
 const specialtiesLinks = [
@@ -26,6 +24,7 @@ const specialtiesLinks = [
 export default function Header({ className = "" }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeFolder, setActiveFolder] = useState(null);
+  const menuButtonRef = useRef(null);
 
   const toggleMenu = () => {
     if (mobileMenuOpen) {
@@ -45,8 +44,8 @@ export default function Header({ className = "" }) {
     <>
       <header
         className={`${
-          mobileMenuOpen ? "fixed z-50 shadow-xs" : "absolute z-40"
-        } top-0 left-0 right-0 w-full bg-[#FAF4EE] pointer-events-auto transition-colors duration-700 ${className}`}
+          mobileMenuOpen ? "fixed z-[60] shadow-xs" : "absolute z-40"
+        } top-0 left-0 right-0 w-full bg-secondary pointer-events-auto transition-colors duration-700 ${className}`}
       >
         {/* Navigation Bar Container */}
         <div className="w-full px-[6vw] py-[6vw] md:px-[5vw] md:py-[1.4vw] flex items-center justify-between">
@@ -59,11 +58,11 @@ export default function Header({ className = "" }) {
               className="inline-block leading-tight group"
               aria-label="Dr. Maya Reynolds, PsyD"
             >
-              <span className="font-heading text-[18px] sm:text-[21px] md:text-[22px] tracking-[0.06em] text-brand-heading font-normal uppercase block">
+              <span className="font-heading text-[18px] sm:text-[21px] md:text-[22px] tracking-[0.06em] text-ink font-normal uppercase block">
                 DR. MAYA REYNOLDS, PSYD
               </span>
-              <span className="font-sans text-[10px] sm:text-[10.5px] tracking-[0.2em] text-brand-sage uppercase font-medium block mt-[3px]">
-                FICTIONAL THERAPIST • SANTA MONICA, CA
+              <span className="font-sans text-[10px] sm:text-[10.5px] tracking-[0.2em] text-muted uppercase font-medium block mt-[3px]">
+                LICENSED CLINICAL PSYCHOLOGIST • SANTA MONICA, CA
               </span>
             </Link>
           </div>
@@ -74,7 +73,7 @@ export default function Header({ className = "" }) {
               <div>
                 <Link
                   href="#about"
-                  className="text-[12.5px] lg:text-[13.3px] uppercase tracking-[0.1em] leading-[1.8em] text-brand-heading font-normal hover:opacity-75 transition-opacity whitespace-nowrap"
+                  className="text-[12.5px] lg:text-[13.3px] uppercase tracking-[0.1em] leading-[1.8em] text-ink font-normal hover:opacity-75 transition-opacity whitespace-nowrap"
                 >
                   About
                 </Link>
@@ -85,7 +84,7 @@ export default function Header({ className = "" }) {
               <div className="ml-[1.5vw] lg:ml-[2.5vw]">
                 <Link
                   href="#approach"
-                  className="text-[12.5px] lg:text-[13.3px] uppercase tracking-[0.1em] leading-[1.8em] text-brand-heading font-normal hover:opacity-75 transition-opacity whitespace-nowrap"
+                  className="text-[12.5px] lg:text-[13.3px] uppercase tracking-[0.1em] leading-[1.8em] text-ink font-normal hover:opacity-75 transition-opacity whitespace-nowrap"
                 >
                   Approach
                 </Link>
@@ -94,7 +93,7 @@ export default function Header({ className = "" }) {
               <div className="ml-[1.5vw] lg:ml-[2.5vw]">
                 <Link
                   href="#office"
-                  className="text-[12.5px] lg:text-[13.3px] uppercase tracking-[0.1em] leading-[1.8em] text-brand-heading font-normal hover:opacity-75 transition-opacity whitespace-nowrap"
+                  className="text-[12.5px] lg:text-[13.3px] uppercase tracking-[0.1em] leading-[1.8em] text-ink font-normal hover:opacity-75 transition-opacity whitespace-nowrap"
                 >
                   Office
                 </Link>
@@ -105,7 +104,7 @@ export default function Header({ className = "" }) {
             <div className="ml-[1.5vw] lg:ml-[2.5vw]">
               <Link
                 href="#booking"
-                className="btn-sharp-filled inline-block text-[12.5px] lg:text-[13px] font-semibold tracking-[0.14em] text-white uppercase bg-[#C37F66] border-2 border-[#C37F66] rounded-none px-8 py-3.5 transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[#B26F57] hover:border-[#B26F57] hover:-translate-y-[2px] hover:shadow-[0_8px_15px_rgba(195,127,102,0.35)] active:translate-y-0 active:shadow-none cursor-pointer"
+                className="btn-sharp-filled inline-block text-[12.5px] lg:text-[13px] font-semibold tracking-[0.14em] text-on-primary uppercase bg-primary border-2 border-primary rounded-none px-8 py-3.5 transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-primary-hover hover:border-primary-hover hover:-translate-y-[2px] hover:shadow-[0_8px_15px_rgba(168,100,75,0.35)] active:translate-y-0 active:shadow-none cursor-pointer"
               >
                 BOOK NOW
               </Link>
@@ -115,8 +114,9 @@ export default function Header({ className = "" }) {
           {/* Mobile & Tablet Hamburger / X Toggle Button with 4s smooth animation */}
           <div className="lg:hidden flex items-center z-50">
             <button
+              ref={menuButtonRef}
               onClick={toggleMenu}
-              className="p-2 text-brand-heading focus:outline-none flex flex-col justify-center items-center cursor-pointer relative"
+              className="p-2 text-ink focus:outline-none flex flex-col justify-center items-center cursor-pointer relative"
               aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
               aria-expanded={mobileMenuOpen}
             >
@@ -128,7 +128,7 @@ export default function Header({ className = "" }) {
                     transitionDuration: "4000ms",
                     transitionTimingFunction: "cubic-bezier(0.25, 1, 0.5, 1)",
                   }}
-                  className={`w-[32px] h-[1.5px] bg-brand-heading block origin-center ${
+                  className={`w-[32px] h-[1.5px] bg-ink block origin-center ${
                     mobileMenuOpen
                       ? "translate-y-[8.5px] rotate-45"
                       : "translate-y-0 rotate-0"
@@ -142,7 +142,7 @@ export default function Header({ className = "" }) {
                     transitionDuration: "4000ms",
                     transitionTimingFunction: "cubic-bezier(0.25, 1, 0.5, 1)",
                   }}
-                  className={`w-[32px] h-[1.5px] bg-brand-heading block origin-center ${
+                  className={`w-[32px] h-[1.5px] bg-ink block origin-center ${
                     mobileMenuOpen
                       ? "opacity-0 scale-x-0"
                       : "opacity-100 scale-x-100"
@@ -156,7 +156,7 @@ export default function Header({ className = "" }) {
                     transitionDuration: "4000ms",
                     transitionTimingFunction: "cubic-bezier(0.25, 1, 0.5, 1)",
                   }}
-                  className={`w-[32px] h-[1.5px] bg-brand-heading block origin-center ${
+                  className={`w-[32px] h-[1.5px] bg-ink block origin-center ${
                     mobileMenuOpen
                       ? "-translate-y-[8.5px] -rotate-45"
                       : "translate-y-0 rotate-0"
@@ -175,8 +175,8 @@ export default function Header({ className = "" }) {
         onClose={closeMenu}
         activeFolder={activeFolder}
         setActiveFolder={setActiveFolder}
-        ourTeamLinks={practiceLinks}
         specialtiesLinks={specialtiesLinks}
+        menuButtonRef={menuButtonRef}
       />
     </>
   );

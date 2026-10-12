@@ -6,24 +6,31 @@ import Section4 from "@/components/Section4/Section4";
 import Section5 from "@/components/Section5/Section5";
 import Section6 from "@/components/Section6/Section6";
 import Section7 from "@/components/Section7/Section7";
+import OurOffice from "@/components/OurOffice/OurOffice";
 import Section8 from "@/components/Section8/Section8";
+import FAQ from "@/components/FAQ/FAQ";
 import Section9 from "@/components/Section9/Section9";
 import Footer from "@/components/Footer/Footer";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-brand-bg text-brand-body selection:bg-brand-teal selection:text-white">
+    <>
       <Header />
-      <Hero />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <Section6 />
-      <Section7 />
-      <Section8 />
-      <Section9 />
+      <main className="min-h-screen bg-surface text-body selection:bg-primary selection:text-on-primary">
+        <Hero />
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <Section5 />
+        <Section6 />
+        <Section7 />
+        <OurOffice />
+        <Section8 />
+        <FAQ />
+        <Section9 />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
+

@@ -9,12 +9,14 @@ export default function UnderlineLink({
   children,
   className = "",
   ariaLabel,
+  ...props
 }) {
   return (
     <Link
       href={href}
-      aria-label={ariaLabel}
-      className={`btn-underline font-body text-[12.4px] text-brand-heading ${className}`}
+      aria-label={ariaLabel || props["aria-label"]}
+      className={`btn-underline font-body text-[12.4px] text-ink ${className}`}
+      {...props}
     >
       {children}
     </Link>

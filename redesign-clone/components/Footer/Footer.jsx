@@ -2,7 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 const clinicalFocus = [
   { name: "Anxiety & Panic", href: "/specialties/anxiety-panic" },
@@ -19,10 +18,10 @@ const clinicalFocus = [
  */
 export default function Footer({ className = "" }) {
   return (
-    <footer id="footer" aria-label="Site Footer" className={`w-full bg-[#2B2D2F] ${className}`}>
+    <footer id="footer" aria-label="Site Footer" className={`w-full bg-ink ${className}`}>
       {/* Main Footer Section - Deep Charcoal with clean light typography */}
-      <section className="relative w-full bg-[#2B2D2F] overflow-hidden">
-        <div className="w-full px-6 py-12 md:px-0 md:py-[calc(45vmax/10)]">
+      <section className="relative w-full bg-ink overflow-hidden">
+        <div className="w-full px-6 py-10 md:px-8 md:py-10 lg:px-0 lg:py-[calc(45vmax/10)]">
           <div className="w-full">
             <div className="fluid-grid-footer w-full">
               
@@ -33,8 +32,8 @@ export default function Footer({ className = "" }) {
                     <span className="font-heading text-[18px] sm:text-[21px] font-normal tracking-[0.06em] uppercase text-white block">
                       DR. MAYA REYNOLDS, PSYD
                     </span>
-                    <span className="font-sans text-[11px] sm:text-[12px] tracking-[0.16em] uppercase text-[#E8E2DC] font-medium block mt-1">
-                      FICTIONAL THERAPIST • SANTA MONICA, CA
+                    <span className="font-sans text-[11px] sm:text-[12px] tracking-[0.16em] uppercase text-line font-medium block mt-1">
+                      Licensed Clinical Psychologist • Santa Monica, CA
                     </span>
                   </Link>
                 </div>
@@ -44,10 +43,10 @@ export default function Footer({ className = "" }) {
               <div className="footer-tagline-block">
                 <div className="h-full flex flex-col justify-start">
                   <p className="font-body font-light text-[15px] sm:text-[16.7px] leading-[1.8] text-white/85 m-0 max-w-[425px]">
-                    Statewide Secure Video Sessions Across California alongside in-person clinical care in Santa Monica.
+                    In-person therapy in Santa Monica and secure telehealth for clients in California.
                   </p>
                   <p className="font-sans text-[12px] sm:text-[13px] leading-[1.6] text-white/60 font-normal m-0 mt-3 max-w-[425px]">
-                    Dr. Maya Reynolds, PsyD is a licensed clinical psychologist in the State of California.
+                    Dr. Maya Reynolds, PsyD is a licensed clinical psychologist in California.
                   </p>
                 </div>
               </div>
@@ -60,28 +59,28 @@ export default function Footer({ className = "" }) {
                   </p>
                   <ul className="list-none p-0 m-0 space-y-1">
                     <li>
-                      <Link href="#about" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-[#C37F66] transition-colors duration-200 block">
+                      <Link href="#about" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
                         About
                       </Link>
                     </li>
                     <li>
-                      <Link href="#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-[#C37F66] transition-colors duration-200 block">
+                      <Link href="#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
                         Specialties
                       </Link>
                     </li>
                     <li>
-                      <Link href="#approach" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-[#C37F66] transition-colors duration-200 block">
+                      <Link href="#approach" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
                         Approach
                       </Link>
                     </li>
                     <li>
-                      <Link href="#office" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-[#C37F66] transition-colors duration-200 block">
+                      <Link href="#office" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
                         Office
                       </Link>
                     </li>
                     <li>
-                      <Link href="#booking" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-[#C37F66] transition-colors duration-200 block">
-                        Book Consultation
+                      <Link href="#booking" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
+                        Schedule a Consultation
                       </Link>
                     </li>
                   </ul>
@@ -95,33 +94,36 @@ export default function Footer({ className = "" }) {
                     CONTACT &amp; LOCATION
                   </p>
                   <div className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 mb-[10px]">
-                    <p className="m-0 font-medium text-white">Santa Monica Practice:</p>
+                    <p className="m-0 font-medium text-white">Santa Monica Practice</p>
                     <p className="m-0">123th Street 45 W</p>
                     <p className="m-0">Santa Monica, CA 90401</p>
-                    <a href="mailto:hello@drmayareynolds.com" className="text-white/80 hover:text-[#C37F66] transition-colors duration-200 block mt-2">
-                      hello@drmayareynolds.com
-                    </a>
-                    <a href="tel:3105550194" className="text-white/80 hover:text-[#C37F66] transition-colors duration-200 block">
-                      310.555.0194
-                    </a>
                   </div>
-                  <p className="font-sans text-[12px] leading-[1.5] text-white/60 font-normal m-0 max-w-[265px]">
-                    Statewide Secure Video Sessions Across California
-                  </p>
                 </div>
               </div>
 
-              {/* Office Hours Column */}
+              {/* Services Column (formerly Hours) */}
               <div className="footer-hours-block">
                 <div className="h-full flex flex-col justify-start">
                   <p className="font-sans text-[13px] sm:text-[14px] font-medium tracking-[0.14em] uppercase text-white mb-[12px]">
-                    HOURS
+                    SERVICES
                   </p>
-                  <div className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 mb-[12px]">
-                    <p className="m-0">Monday – Thursday: 9:00 AM – 6:00 PM</p>
-                    <p className="m-0">Friday: By Appointment</p>
-                    <p className="m-0 text-white/60 text-[13px] mt-1">Saturday – Sunday: Closed</p>
-                  </div>
+                  <ul className="list-none p-0 m-0 space-y-1">
+                    <li>
+                      <Link href="#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
+                        Anxiety &amp; Panic Therapy
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
+                        Trauma &amp; EMDR Therapy
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
+                        Burnout &amp; Perfectionism Therapy
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -130,8 +132,8 @@ export default function Footer({ className = "" }) {
         </div>
       </section>
 
-      {/* Sub-footer Legal Bar - Grounding Terracotta #C37F66 */}
-      <section className="relative w-full bg-[#C37F66] overflow-hidden">
+      {/* Sub-footer Legal Bar - Grounding Terracotta Token */}
+      <section className="relative w-full bg-primary overflow-hidden">
         <div className="w-full px-6 py-4 md:px-0 md:py-[calc(5vmax/10)]">
           <div className="w-full">
             <div className="fluid-grid-subfooter w-full">
@@ -148,10 +150,10 @@ export default function Footer({ className = "" }) {
                       </Link>
                       <span className="text-white/80 mx-2">|</span>
                       <Link href="/disclaimer" className="text-white hover:underline underline-offset-4 transition-all">
-                        Good Faith Estimate Notice
+                        Disclaimer
                       </Link>
                       <span className="text-white/80 mx-2">|</span>
-                      <span>&copy; 2026 Dr. Maya Reynolds, PsyD. All rights reserved.</span>
+                      <span>&copy; 2026 Dr. Maya Reynolds, PsyD</span>
                     </p>
                   </div>
                 </div>

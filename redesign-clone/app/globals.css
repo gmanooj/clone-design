@@ -56,19 +56,44 @@ a, button {
   transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @theme {
-  --color-brand-bg: #FFFFFF;          /* Base pure white */
-  --color-brand-hero-bg: #FAF4EE;     /* Ultra-pale whisper peach (Header, Hero & Section 2 only) */
-  --color-brand-surface: #FBF9F6;     /* Soft neutral ivory */
-  --color-brand-peach: #FAF4EE;       /* Whisper peach */
-  --color-brand-accent: #C37F66;      /* Terracotta accent & signature */
-  --color-brand-teal: #C37F66;        /* Mapped to Terracotta */
-  --color-brand-heading: #2B2D2F;     /* Soft deep charcoal */
-  --color-brand-body: #2B2D2F;        /* Soft deep charcoal */
-  --color-brand-sage: #8C827A;        /* Warm muted neutral for subtitles/eyebrows */
-  --color-brand-mint: #E8E2DC;        /* Soft divider */
-  --color-brand-border: #E8E2DC;      /* Subtle hairline divider */
-  --color-brand-dark: #2B2D2F;        /* Deep charcoal */
+  /* Centralized Semantic Theme Tokens */
+  --color-primary: #A8644B;          /* Terracotta (buttons, links, accents; WCAG AA 4.5:1 compliant) */
+  --color-primary-hover: #8E533E;    /* Darker terracotta for hover states */
+  --color-secondary: #FAF4EE;        /* Cream page background (Header, Hero, Sec2, Sec7, Office) */
+  --color-accent: #A8644B;           /* Script-font words, highlights, icons */
+  --color-ink: #2B2D2F;              /* Headings, footer background, primary dark charcoal */
+  --color-body: #2B2D2F;             /* Main paragraph text */
+  --color-muted: #6B625C;            /* Small/supporting text (darkened to 5.5:1 on cream) */
+  --color-line: #E8DFD8;             /* Borders, dividers, subtle separators */
+  --color-surface: #FFFFFF;          /* Cards, white sections */
+  --color-on-primary: #FFFFFF;       /* Text on primary buttons */
+  --color-scrim: #1C1A18;            /* Dark atmospheric scrim for quote banner */
+
+  /* Legacy brand token aliases mapped to centralized tokens */
+  --color-brand-bg: var(--color-surface);
+  --color-brand-hero-bg: var(--color-secondary);
+  --color-brand-surface: var(--color-secondary);
+  --color-brand-peach: var(--color-secondary);
+  --color-brand-accent: var(--color-accent);
+  --color-brand-teal: var(--color-primary);
+  --color-brand-heading: var(--color-ink);
+  --color-brand-body: var(--color-body);
+  --color-brand-sage: var(--color-muted);
+  --color-brand-mint: var(--color-line);
+  --color-brand-border: var(--color-line);
+  --color-brand-dark: var(--color-ink);
 
   /* Fonts */
   --font-serif: "beaufort-pro", var(--font-heading), "Georgia", serif;
@@ -133,7 +158,7 @@ h1, h2, h3, h4 {
   bottom: 0px;
   width: 100%;
   height: 1.5px;
-  background-color: #C37F66;
+  background-color: var(--color-primary);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
@@ -208,10 +233,10 @@ button.btn-sharp:active {
   appearance: none;
   -webkit-appearance: none;
   background-color: transparent !important;
-  border: 2px solid #C37F66 !important;
+  border: 2px solid var(--color-primary) !important;
   border-radius: 0px !important;
   box-sizing: border-box;
-  color: #C37F66 !important;
+  color: var(--color-primary) !important;
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
@@ -234,9 +259,9 @@ button.btn-sharp:active {
 }
 
 .btn-sharp-terracotta:hover {
-  color: #FFFFFF !important;
-  background-color: #C37F66 !important;
-  box-shadow: rgba(195, 127, 102, 0.35) 0 8px 15px !important;
+  color: var(--color-on-primary) !important;
+  background-color: var(--color-primary) !important;
+  box-shadow: rgba(168, 100, 75, 0.35) 0 8px 15px !important;
   transform: translateY(-2px) !important;
 }
 
@@ -245,17 +270,17 @@ button.btn-sharp:active {
   transform: translateY(0) !important;
 }
 
-/* Filled sharp button variant for primary intake CTA - Warm Terracotta #C37F66 */
+/* Filled sharp button variant for primary intake CTA - Semantic Primary */
 .btn-sharp-filled,
 a.btn-sharp-filled,
 button.btn-sharp-filled {
   appearance: none;
   -webkit-appearance: none;
-  background-color: #C37F66 !important;
-  border: 2px solid #C37F66 !important;
+  background-color: var(--color-primary) !important;
+  border: 2px solid var(--color-primary) !important;
   border-radius: 0px !important;
   box-sizing: border-box;
-  color: #FFFFFF !important;
+  color: var(--color-on-primary) !important;
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
@@ -280,10 +305,10 @@ button.btn-sharp-filled {
 .btn-sharp-filled:hover,
 a.btn-sharp-filled:hover,
 button.btn-sharp-filled:hover {
-  color: #FFFFFF !important;
-  background-color: #B26F57 !important;
-  border-color: #B26F57 !important;
-  box-shadow: rgba(195, 127, 102, 0.35) 0 8px 15px !important;
+  color: var(--color-on-primary) !important;
+  background-color: var(--color-primary-hover) !important;
+  border-color: var(--color-primary-hover) !important;
+  box-shadow: rgba(168, 100, 75, 0.35) 0 8px 15px !important;
   transform: translateY(-2px) !important;
 }
 

@@ -12,22 +12,22 @@ import UnderlineLink from "@/components/common/UnderlineLink";
 export default function Section7({ className = "" }) {
   return (
     <section
-      id="office"
-      aria-label="The Santa Monica Office"
-      className={`relative w-full bg-[#FBF9F6] overflow-hidden min-h-[66vh] flex items-center ${className}`}
+      id="philosophy"
+      aria-label="Clinical Philosophy & Growth"
+      className={`relative w-full bg-secondary overflow-hidden min-h-0 lg:min-h-[66vh] flex items-center ${className}`}
     >
-      <div className="w-full px-6 py-12 md:px-0 md:py-[95.04px]">
+      <div className="w-full px-6 py-10 md:px-8 md:py-10 lg:px-0 lg:py-[95.04px]">
         <div className="w-full">
           <div className="fluid-grid-sec7 w-full">
 
             {/* Left Media Asset (Aspect 4/3 on mobile) */}
             <div className="sec7-media-block w-full h-full">
-              <ImageReveal className="relative w-full aspect-[4/3] md:aspect-auto md:h-full min-h-0 overflow-hidden mb-6 md:mb-0">
+              <ImageReveal className="relative w-full aspect-[4/3] md:aspect-[4/3] lg:aspect-auto lg:h-full min-h-0 overflow-hidden mb-6 md:mb-0">
                 <Image
-                  src="/images/office/santa-monica-office-sanctuary.jpg"
-                  alt="A calm, sunlit Santa Monica therapy suite with natural California light, olive tree, and organic textures"
+                  src="/images/sections/maya-coastal-grounding.jpg"
+                  alt="Dr. Maya Reynolds, licensed clinical psychologist in Santa Monica, CA"
                   fill
-                  sizes="(max-width: 768px) 100vw, 55vw"
+                  sizes="(max-width: 1024px) 100vw, 55vw"
                   className="object-cover object-center block"
                 />
                 <div className="media-overlay" />
@@ -37,21 +37,22 @@ export default function Section7({ className = "" }) {
             {/* Right Content Block */}
             <div className="sec7-headline-block">
               <div className="h-full flex flex-col justify-center">
-                <p className="font-sans text-[12px] sm:text-[13px] font-medium tracking-[0.14em] uppercase text-brand-sage mb-3">
-                  IN-PERSON &amp; CALIFORNIA TELEHEALTH
+                <p className="font-sans text-[12px] sm:text-[13px] font-medium tracking-[0.14em] uppercase text-muted mb-3">
+                  Therapy rooted in respect
                 </p>
-                <h2 className="font-heading font-light text-[28px] sm:text-[36px] md:text-[42px] leading-[1.25] tracking-[-0.01em] text-brand-heading mb-4">
-                  A calm, uncluttered sanctuary in Santa Monica.
+                <h2 className="font-heading font-light text-[28px] sm:text-[36px] md:text-[42px] leading-[1.25] tracking-[-0.01em] text-ink mb-4">
+                  Honoring where you&apos;ve been, building a stronger relationship with yourself.
                 </h2>
-                <p className="font-body font-light text-[14px] sm:text-[15.5px] leading-[1.75] text-brand-body mb-6">
-                  Located at 123th Street 45 W, our Santa Monica therapy suite is an in-person sanctuary intentionally curated with natural coastal light, warm organic textures, and complete acoustic privacy. From the moment you arrive, the environment is crafted to help an overworked nervous system settle and decompress. For clients residing across the state, our secure, HIPAA-compliant California telehealth practice provides the identical depth of grounded, somatic, and trauma-informed care.
+                <p className="font-body font-light text-[14px] sm:text-[15.5px] leading-[1.75] text-body mb-6">
+                  I believe therapy works best when you feel respected, understood, and actively involved. My goal is not only symptom relief, but helping you develop insight, resilience, and a stronger relationship with yourself over time.
                 </p>
                 <div>
                   <UnderlineLink
-                    href="#booking"
-                    className="text-[#C37F66]"
+                    href="#approach"
+                    aria-label="Explore my approach to therapy and personal growth"
+                    className="text-primary"
                   >
-                    EXPLORE OFFICE DETAILS
+                    Explore my approach
                   </UnderlineLink>
                 </div>
               </div>

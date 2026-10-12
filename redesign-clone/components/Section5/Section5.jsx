@@ -4,21 +4,21 @@ import React from "react";
 import UnderlineLink from "@/components/common/UnderlineLink";
 
 const specialtiesColumn1 = [
-  "Generalized Anxiety & Chronic Worry",
-  "Panic Attacks & Bodily Tension",
-  "Single-Incident & Complex Trauma",
-  "EMDR Trauma Processing",
-  "Executive & Creative Burnout",
-  "Perfectionism & High Internal Pressure",
+  "Constant Worry & Overthinking",
+  "Anxiety & Panic",
+  "Body Tension & Physical Stress",
+  "Difficulty Sleeping",
+  "Single-Incident Trauma",
+  "Complex & Long-Standing Trauma",
 ];
 
 const specialtiesColumn2 = [
-  "Sleep Difficulties & Insomnia",
-  "Imposter Phenomenon & Self-Doubt",
-  "Mind-Body Stress Regulation",
-  "Life & Career Transitions",
-  "Mindfulness-Based Stabilization",
-  "Relational & Family Patterning",
+  "EMDR Trauma Therapy",
+  "Professional Burnout",
+  "Perfectionism",
+  "High Internal Pressure",
+  "Stress Regulation & Stabilization",
+  "Mindfulness-Based Practices",
 ];
 
 /**
@@ -31,44 +31,44 @@ export default function Section5({ className = "" }) {
     <section
       id="expertise"
       aria-label="Areas of Expertise"
-      className={`relative w-full bg-[#FBF9F6] overflow-hidden ${className}`}
+      className={`relative w-full bg-secondary overflow-hidden ${className}`}
     >
-      <div className="w-full relative z-10 px-6 py-12 md:px-0 md:py-[calc(80vmax/10)]">
+      <div className="w-full relative z-10 px-6 py-12 md:px-8 md:py-12 lg:px-0 lg:py-[calc(80vmax/10)]">
         <div className="w-full">
           <div className="fluid-grid-sec5 w-full">
             
             {/* Title: Comprehensive Psychological Care Rooted in Science & Warmth */}
             <div className="sec5-title-block">
               <div className="h-full flex flex-col justify-start">
-                <span className="font-sans text-[11px] sm:text-[12px] uppercase tracking-[0.2em] text-brand-sage font-medium mb-3 block">
-                  SUPPORTING ADULTS ACROSS SANTA MONICA &amp; THROUGHOUT CALIFORNIA
+                <span className="font-sans text-[11px] sm:text-[12px] uppercase tracking-[0.2em] text-muted font-medium mb-3 block">
+                  Supporting adults in Santa Monica &amp; across California
                 </span>
-                <h3 className="font-heading font-light text-[26px] sm:text-[32px] leading-[1.28] tracking-[-0.01em] text-brand-heading m-0">
-                  Comprehensive Psychological Care Rooted in{" "}
+                <h2 className="font-heading font-light text-[26px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-[1.28] tracking-[-0.01em] text-ink m-0">
+                  Therapy Specialties Rooted in Evidence &amp;{" "}
                   <span
                     style={{ fontFamily: "var(--font-wedding-day), 'WeddingdayPersonal', cursive" }}
-                    className="font-normal text-[#C37F66] inline-block ml-1 text-[1.25em] sm:text-[1.38em] leading-none transform translate-y-[2px] sm:translate-y-[4px]"
+                    className="font-normal text-accent inline-block ml-1 text-[1.25em] sm:text-[1.38em] leading-none transform translate-y-[2px] sm:translate-y-[4px]"
                   >
-                    Science &amp; Warmth
+                    Warmth
                   </span>
-                </h3>
+                </h2>
               </div>
             </div>
 
             {/* Specialties 2-Column Balanced Grid */}
             <div className="sec5-content-block w-full">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-y-3 lg:gap-x-12 w-full">
                 
                 {/* Column 1 */}
                 <div className="flex flex-col w-full">
                   {specialtiesColumn1.map((item, idx) => (
                     <div
                       key={idx}
-                      className="py-3.5 md:py-[18px] border-b border-[#E8E2DC] flex items-center min-h-[46px] md:min-h-[58px]"
+                      className="py-3.5 md:py-[18px] border-b border-line flex items-center min-h-[46px] md:min-h-[58px]"
                     >
                       <UnderlineLink
                         href="#specialties"
-                        className="font-sans text-[12px] sm:text-[13.5px] md:text-[14.5px] leading-[1.4] font-normal tracking-[0.14em] text-brand-heading uppercase transition-colors duration-200 hover:text-brand-accent block w-full"
+                        className="font-sans text-[12px] sm:text-[13.5px] md:text-[14.5px] leading-[1.4] font-normal tracking-[0.14em] text-ink uppercase transition-colors duration-200 hover:text-accent block w-full"
                       >
                         {item}
                       </UnderlineLink>
@@ -81,11 +81,11 @@ export default function Section5({ className = "" }) {
                   {specialtiesColumn2.map((item, idx) => (
                     <div
                       key={idx}
-                      className="py-3.5 md:py-[18px] border-b border-[#E8E2DC] flex items-center min-h-[46px] md:min-h-[58px]"
+                      className="py-3.5 md:py-[18px] border-b border-line flex items-center min-h-[46px] md:min-h-[58px]"
                     >
                       <UnderlineLink
                         href="#specialties"
-                        className="font-sans text-[12px] sm:text-[13.5px] md:text-[14.5px] leading-[1.4] font-normal tracking-[0.14em] text-brand-heading uppercase transition-colors duration-200 hover:text-brand-accent block w-full"
+                        className="font-sans text-[12px] sm:text-[13.5px] md:text-[14.5px] leading-[1.4] font-normal tracking-[0.14em] text-ink uppercase transition-colors duration-200 hover:text-accent block w-full"
                       >
                         {item}
                       </UnderlineLink>
