@@ -41,10 +41,11 @@ export const metadata = {
     siteName: "Dr. Maya Reynolds, PsyD",
     images: [
       {
-        url: "/og-portrait-only.jpg",
+        url: `${SITE_URL}/og-portrait-only.jpg`,
         width: 1200,
         height: 630,
-        alt: "Dr. Maya Reynolds, PsyD — Therapy in Santa Monica, CA",
+        type: "image/jpeg",
+        alt: "Dr. Maya Reynolds, PsyD - Therapy in Santa Monica, CA",
       },
     ],
   },
@@ -54,10 +55,11 @@ export const metadata = {
     description: "Licensed clinical psychologist in Santa Monica, CA offering anxiety, trauma, EMDR and burnout therapy for adults. In-person sessions and secure California telehealth.",
     images: [
       {
-        url: "/og-portrait-only.jpg",
+        url: `${SITE_URL}/og-portrait-only.jpg`,
         width: 1200,
         height: 630,
-        alt: "Dr. Maya Reynolds, PsyD — Therapy in Santa Monica, CA",
+        type: "image/jpeg",
+        alt: "Dr. Maya Reynolds, PsyD - Therapy in Santa Monica, CA",
       },
     ],
   },
@@ -89,6 +91,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${mulish.variable} ${weddingDay.variable}`}>
       <head>
+        <meta property="og:title" content="Anxiety & Trauma Therapist in Santa Monica | Dr. Maya Reynolds, PsyD" />
+        <meta property="og:description" content="Licensed clinical psychologist in Santa Monica, CA offering anxiety, trauma, EMDR and burnout therapy for adults. In-person sessions and secure California telehealth." />
+        <meta property="og:url" content={SITE_URL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dr. Maya Reynolds, PsyD" />
+        <meta property="og:image" content={`${SITE_URL}/og-portrait-only.jpg`} />
+        <meta property="og:image:secure_url" content={`${SITE_URL}/og-portrait-only.jpg`} />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Dr. Maya Reynolds, PsyD - Therapy in Santa Monica, CA" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Anxiety & Trauma Therapist in Santa Monica | Dr. Maya Reynolds, PsyD" />
+        <meta name="twitter:description" content="Licensed clinical psychologist in Santa Monica, CA offering anxiety, trauma, EMDR and burnout therapy for adults. In-person sessions and secure California telehealth." />
+        <meta name="twitter:image" content={`${SITE_URL}/og-portrait-only.jpg`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
