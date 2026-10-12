@@ -42,8 +42,8 @@ export const metadata = {
     images: [
       {
         url: `${SITE_URL}/og-portrait-only.jpg`,
-        width: 682,
-        height: 1024,
+        width: 800,
+        height: 800,
         type: "image/jpeg",
         alt: "Dr. Maya Reynolds, PsyD - Therapy in Santa Monica, CA",
       },
@@ -56,8 +56,8 @@ export const metadata = {
     images: [
       {
         url: `${SITE_URL}/og-portrait-only.jpg`,
-        width: 682,
-        height: 1024,
+        width: 800,
+        height: 800,
         type: "image/jpeg",
         alt: "Dr. Maya Reynolds, PsyD - Therapy in Santa Monica, CA",
       },
@@ -99,8 +99,8 @@ export default function RootLayout({ children }) {
         <meta property="og:image" content={`${SITE_URL}/og-portrait-only.jpg`} />
         <meta property="og:image:secure_url" content={`${SITE_URL}/og-portrait-only.jpg`} />
         <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="682" />
-        <meta property="og:image:height" content="1024" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="800" />
         <meta property="og:image:alt" content="Dr. Maya Reynolds, PsyD - Therapy in Santa Monica, CA" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Anxiety & Trauma Therapist in Santa Monica | Dr. Maya Reynolds, PsyD" />

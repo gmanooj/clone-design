@@ -97,33 +97,27 @@ export default function Footer({ className = "" }) {
                     <p className="m-0 font-medium text-white">Santa Monica Practice</p>
                     <p className="m-0">123th Street 45 W</p>
                     <p className="m-0">Santa Monica, CA 90401</p>
+                    <Link
+                      href="/#booking"
+                      className="text-white/80 hover:text-primary transition-colors duration-200 block mt-2"
+                    >
+                      Inquiries via consultation booking form
+                    </Link>
                   </div>
                 </div>
               </div>
 
-              {/* Services Column (formerly Hours) */}
+              {/* Hours Column */}
               <div className="footer-hours-block">
                 <div className="h-full flex flex-col justify-start">
                   <p className="font-sans text-[13px] sm:text-[14px] font-medium tracking-[0.14em] uppercase text-white mb-[12px]">
-                    SERVICES
+                    HOURS
                   </p>
-                  <ul className="list-none p-0 m-0 space-y-1">
-                    <li>
-                      <Link href="/#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
-                        Anxiety &amp; Panic Therapy
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
-                        Trauma &amp; EMDR Therapy
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
-                        Burnout &amp; Perfectionism Therapy
-                      </Link>
-                    </li>
-                  </ul>
+                  <div className="font-body font-light text-[14.5px] leading-[1.75] text-white/80">
+                    <p className="m-0">
+                      In-person in Santa Monica &bull; Secure telehealth across California
+                    </p>
+                  </div>
                 </div>
               </div>
 
