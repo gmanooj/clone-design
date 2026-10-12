@@ -45,29 +45,29 @@ export default function Header({ className = "" }) {
       <header
         className={`${
           mobileMenuOpen ? "fixed z-[60] shadow-xs" : "absolute z-40"
-        } top-0 left-0 right-0 w-full bg-secondary pointer-events-auto transition-colors duration-700 ${className}`}
+        } top-0 left-0 right-0 w-full max-w-full box-border bg-secondary pointer-events-auto transition-colors duration-700 ${className}`}
       >
         {/* Navigation Bar Container */}
-        <div className="w-full px-[6vw] py-[6vw] md:px-[5vw] md:py-[1.4vw] flex items-center justify-between">
+        <div className="w-full max-w-full box-border px-[6vw] py-[6vw] md:px-[5vw] md:py-[1.4vw] flex items-center justify-between">
           
           {/* Brand Logo / Text */}
-          <div className="flex-shrink-0 leading-none">
+          <div className="flex-1 min-w-0 leading-none mr-2 sm:mr-4">
             <Link
               href="/"
               onClick={closeMenu}
-              className="inline-block leading-tight group"
+              className="inline-block leading-tight group max-w-full"
               aria-label="Dr. Maya Reynolds, PsyD"
             >
-              <span className="font-heading text-[18px] sm:text-[21px] md:text-[22px] tracking-[0.06em] text-ink font-normal uppercase block">
+              <span className="font-heading text-[17px] sm:text-[21px] md:text-[22px] tracking-[0.05em] sm:tracking-[0.06em] text-ink font-normal uppercase block">
                 DR. MAYA REYNOLDS, PSYD
               </span>
-              <span className="font-sans text-[10px] sm:text-[10.5px] tracking-[0.2em] text-muted uppercase font-medium block mt-[3px]">
+              <span className="font-sans text-[10px] md:text-[10.5px] tracking-[0.06em] sm:tracking-[0.14em] md:tracking-[0.2em] text-muted uppercase font-medium block mt-[3px] whitespace-normal leading-tight">
                 LICENSED CLINICAL PSYCHOLOGIST • SANTA MONICA, CA
               </span>
             </Link>
           </div>
 
-            {/* Desktop Navigation */}
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center">
             <nav className="flex items-center text-right font-[family-name:var(--font-body)]">
               <div>
@@ -111,22 +111,22 @@ export default function Header({ className = "" }) {
             </div>
           </div>
 
-          {/* Mobile & Tablet Hamburger / X Toggle Button with 4s smooth animation */}
-          <div className="lg:hidden flex items-center z-50">
+          {/* Mobile & Tablet Hamburger / X Toggle Button with smooth animation */}
+          <div className="lg:hidden flex-shrink-0 flex items-center z-50 ml-1">
             <button
               ref={menuButtonRef}
               onClick={toggleMenu}
-              className="p-2 text-ink focus:outline-none flex flex-col justify-center items-center cursor-pointer relative"
+              className="min-w-[44px] min-h-[44px] p-2 text-ink focus:outline-none flex flex-col justify-center items-center cursor-pointer relative"
               aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
               aria-expanded={mobileMenuOpen}
             >
               <div className="w-[32px] h-[20px] relative flex flex-col justify-between items-center py-[1px]">
-                {/* 1st Line (Top) - Rotates 45deg down to form \ slowly over 4s */}
+                {/* 1st Line (Top) - Rotates 45deg down to form \ slowly over 400ms */}
                 <span
                   style={{
                     transitionProperty: "transform",
-                    transitionDuration: "4000ms",
-                    transitionTimingFunction: "cubic-bezier(0.25, 1, 0.5, 1)",
+                    transitionDuration: "400ms",
+                    transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
                   }}
                   className={`w-[32px] h-[1.5px] bg-ink block origin-center ${
                     mobileMenuOpen
@@ -135,12 +135,12 @@ export default function Header({ className = "" }) {
                   }`}
                 />
                 
-                {/* 2nd Line (Middle) - Slowly fades out over 4s */}
+                {/* 2nd Line (Middle) - Slowly fades out over 400ms */}
                 <span
                   style={{
                     transitionProperty: "opacity, transform",
-                    transitionDuration: "4000ms",
-                    transitionTimingFunction: "cubic-bezier(0.25, 1, 0.5, 1)",
+                    transitionDuration: "400ms",
+                    transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
                   }}
                   className={`w-[32px] h-[1.5px] bg-ink block origin-center ${
                     mobileMenuOpen
@@ -149,12 +149,12 @@ export default function Header({ className = "" }) {
                   }`}
                 />
                 
-                {/* 3rd Line (Bottom) - Rotates -45deg up to form / slowly over 4s */}
+                {/* 3rd Line (Bottom) - Rotates -45deg up to form / slowly over 400ms */}
                 <span
                   style={{
                     transitionProperty: "transform",
-                    transitionDuration: "4000ms",
-                    transitionTimingFunction: "cubic-bezier(0.25, 1, 0.5, 1)",
+                    transitionDuration: "400ms",
+                    transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
                   }}
                   className={`w-[32px] h-[1.5px] bg-ink block origin-center ${
                     mobileMenuOpen
