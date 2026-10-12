@@ -18,7 +18,7 @@ export default function Section4({ className = "" }) {
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
         <Image
           src="/images/sections/quote-pacific-shoreline.jpg"
-          alt="Serene Pacific shoreline at sunrise with misty coastal hills and gentle tide"
+          alt="Misty coastal hills and gentle tide along the shoreline"
           fill
           sizes="100vw"
           className="object-cover object-center block"
@@ -37,9 +37,9 @@ export default function Section4({ className = "" }) {
             {/* Centered Quotation Text */}
             <div className="sec4-quote-block">
               <div className="h-full flex flex-col justify-end">
-                <h2 className="font-heading font-light text-[30px] sm:text-[38px] md:text-[44px] leading-[1.35] tracking-[-0.01em] text-white m-0 drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]">
+                <blockquote className="font-heading font-light text-[30px] sm:text-[38px] md:text-[44px] leading-[1.35] tracking-[-0.01em] text-white m-0 drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]">
                   &ldquo;Therapy can become a space to slow down, reconnect, and develop more sustainable ways of living and working.&rdquo;
-                </h2>
+                </blockquote>
                 <p className="font-sans text-[12px] sm:text-[13px] tracking-[0.16em] uppercase text-white/90 font-normal mt-6 drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)]">
                   — Dr. Maya Reynolds, PsyD • Santa Monica, California
                 </p>

@@ -104,7 +104,7 @@ export default function MobileDrawer({
           <div className="flex flex-col space-y-6 text-left">
             <div>
               <Link
-                href="#about"
+                href="/#about"
                 onClick={onClose}
                 className="font-heading text-[26px] sm:text-[30px] uppercase tracking-[0.06em] text-ink font-light hover:text-accent transition-colors"
               >
@@ -124,7 +124,7 @@ export default function MobileDrawer({
 
             <div>
               <Link
-                href="#approach"
+                href="/#approach"
                 onClick={onClose}
                 className="font-heading text-[26px] sm:text-[30px] uppercase tracking-[0.06em] text-ink font-light hover:text-accent transition-colors"
               >
@@ -134,7 +134,7 @@ export default function MobileDrawer({
 
             <div>
               <Link
-                href="#office"
+                href="/#office"
                 onClick={onClose}
                 className="font-heading text-[26px] sm:text-[30px] uppercase tracking-[0.06em] text-ink font-light hover:text-accent transition-colors"
               >
@@ -158,7 +158,7 @@ export default function MobileDrawer({
                 specialtiesLinks.map((item) => (
                   <Link
                     key={item.name}
-                    href={item.href}
+                    href={item.href.startsWith("#") ? `/${item.href}` : item.href}
                     onClick={onClose}
                     className="font-heading text-[20px] sm:text-[24px] uppercase tracking-[0.06em] text-ink font-light hover:text-accent transition-colors"
                   >
@@ -173,7 +173,7 @@ export default function MobileDrawer({
       {/* Bottom Action CTA */}
       <div className="px-[8vw] pb-10 flex-shrink-0 text-center">
         <Link
-          href="#booking"
+          href="/#booking"
           onClick={onClose}
           className="btn-sharp-filled inline-block w-full max-w-[280px] text-[13px] font-semibold tracking-[0.14em] text-on-primary uppercase bg-primary border-2 border-primary rounded-none py-3.5 transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-primary-hover hover:border-primary-hover hover:-translate-y-[2px] hover:shadow-[0_8px_15px_rgba(168,100,75,0.35)] active:translate-y-0 active:shadow-none cursor-pointer"
         >

@@ -12,7 +12,7 @@ import UnderlineLink from "@/components/common/UnderlineLink";
 export default function Section2({ className = "" }) {
   return (
     <section
-      id="about"
+      id="intro"
       aria-label="Philosophy & Approach"
       className={`relative w-full bg-secondary overflow-hidden ${className}`}
     >
@@ -61,7 +61,7 @@ export default function Section2({ className = "" }) {
               </ImageReveal>
               <div className="lg:hidden mt-2">
                 <UnderlineLink
-                  href="#office"
+                  href="#about"
                   aria-label="Read about Dr. Reynolds and practice background"
                   className="text-primary"
                 >
@@ -78,7 +78,7 @@ export default function Section2({ className = "" }) {
                 </p>
                 <div className="hidden lg:block mt-1 md:mt-2">
                   <UnderlineLink
-                    href="#office"
+                    href="#about"
                     aria-label="Read about Dr. Reynolds and practice background"
                     className="text-primary"
                   >

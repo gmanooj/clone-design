@@ -25,7 +25,7 @@ export default function Section9({ className = "" }) {
               <ImageReveal direction="up" className="relative w-full h-full min-h-0 overflow-hidden">
                 <Image
                   src="/images/sections/cta-sanctuary-detail.jpg"
-                  alt="Armchair with linen cushions and eucalyptus vase beside a warm textured wall"
+                  alt="Armchair with cushions and vase beside a warm textured wall"
                   fill
                   sizes="(max-width: 1024px) 70vw, 20vw"
                   className="object-cover object-center block"
@@ -87,7 +87,7 @@ export default function Section9({ className = "" }) {
               <ImageReveal direction="down" delay={140} className="relative w-full aspect-[4/3] md:aspect-[4/3] lg:aspect-auto lg:h-full min-h-0 overflow-hidden mt-8 md:mt-0">
                 <Image
                   src="/images/sections/booking-warm-stone.webp"
-                  alt="Journal, ceramic cup, and grounding stone on an oak table in morning light"
+                  alt="Journal, ceramic cup, and smooth stone on a wooden table in morning light"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover block"

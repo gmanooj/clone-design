@@ -12,8 +12,8 @@ import UnderlineLink from "@/components/common/UnderlineLink";
 export default function Section7({ className = "" }) {
   return (
     <section
-      id="philosophy"
-      aria-label="Clinical Philosophy & Growth"
+      id="about"
+      aria-label="About Dr. Maya Reynolds"
       className={`relative w-full bg-secondary overflow-hidden min-h-0 lg:min-h-[66vh] flex items-center ${className}`}
     >
       <div className="w-full px-6 py-10 md:px-8 md:py-10 lg:px-0 lg:py-[95.04px]">
@@ -25,7 +25,7 @@ export default function Section7({ className = "" }) {
               <ImageReveal className="relative w-full aspect-[4/3] md:aspect-[4/3] lg:aspect-auto lg:h-full min-h-0 overflow-hidden mb-6 md:mb-0">
                 <Image
                   src="/images/sections/maya-coastal-grounding.jpg"
-                  alt="Dr. Maya Reynolds, licensed clinical psychologist in Santa Monica, CA"
+                  alt="Woman standing on a coastal path overlooking the ocean"
                   fill
                   sizes="(max-width: 1024px) 100vw, 55vw"
                   className="object-cover object-center block"
@@ -38,13 +38,13 @@ export default function Section7({ className = "" }) {
             <div className="sec7-headline-block">
               <div className="h-full flex flex-col justify-center">
                 <p className="font-sans text-[12px] sm:text-[13px] font-medium tracking-[0.14em] uppercase text-muted mb-3">
-                  Therapy rooted in respect
+                  About Dr. Maya Reynolds
                 </p>
                 <h2 className="font-heading font-light text-[28px] sm:text-[36px] md:text-[42px] leading-[1.25] tracking-[-0.01em] text-ink mb-4">
-                  Honoring where you&apos;ve been, building a stronger relationship with yourself.
+                  Meet Dr. Maya Reynolds, Psychologist in Santa Monica
                 </h2>
                 <p className="font-body font-light text-[14px] sm:text-[15.5px] leading-[1.75] text-body mb-6">
-                  I believe therapy works best when you feel respected, understood, and actively involved. My goal is not only symptom relief, but helping you develop insight, resilience, and a stronger relationship with yourself over time.
+                  I&apos;m a licensed clinical psychologist in Santa Monica, California, offering therapy for adults who feel overwhelmed by anxiety, stress, or the lingering effects of past experiences. My approach is warm, collaborative, and grounded, using CBT, EMDR, mindfulness-based practices, and body-oriented techniques, in person in Santa Monica and by secure telehealth across California. I believe therapy works best when you feel respected, understood, and actively involved.
                 </p>
                 <div>
                   <UnderlineLink

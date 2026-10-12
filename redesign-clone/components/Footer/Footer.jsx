@@ -59,27 +59,27 @@ export default function Footer({ className = "" }) {
                   </p>
                   <ul className="list-none p-0 m-0 space-y-1">
                     <li>
-                      <Link href="#about" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
+                      <Link href="/#about" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
                         About
                       </Link>
                     </li>
                     <li>
-                      <Link href="#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
+                      <Link href="/#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
                         Specialties
                       </Link>
                     </li>
                     <li>
-                      <Link href="#approach" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
+                      <Link href="/#approach" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
                         Approach
                       </Link>
                     </li>
                     <li>
-                      <Link href="#office" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
+                      <Link href="/#office" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
                         Office
                       </Link>
                     </li>
                     <li>
-                      <Link href="#booking" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
+                      <Link href="/#booking" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
                         Schedule a Consultation
                       </Link>
                     </li>
@@ -109,17 +109,17 @@ export default function Footer({ className = "" }) {
                   </p>
                   <ul className="list-none p-0 m-0 space-y-1">
                     <li>
-                      <Link href="#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
+                      <Link href="/#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
                         Anxiety &amp; Panic Therapy
                       </Link>
                     </li>
                     <li>
-                      <Link href="#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
+                      <Link href="/#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
                         Trauma &amp; EMDR Therapy
                       </Link>
                     </li>
                     <li>
-                      <Link href="#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
+                      <Link href="/#specialties" className="font-body font-light text-[14.5px] leading-[1.75] text-white/80 hover:text-primary transition-colors duration-200 block">
                         Burnout &amp; Perfectionism Therapy
                       </Link>
                     </li>

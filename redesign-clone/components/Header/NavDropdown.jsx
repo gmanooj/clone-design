@@ -24,7 +24,7 @@ export default function NavDropdown({ title, links, id }) {
           {links.map((item) => (
             <div key={item.name}>
               <Link
-                href={item.href}
+                href={item.href.startsWith("#") ? `/${item.href}` : item.href}
                 className="inline-block text-[11px] xl:text-[11.5px] uppercase tracking-[0.08em] text-ink font-normal hover:border-b hover:border-ink pb-[1px] transition-all duration-150 whitespace-nowrap"
               >
                 {item.name}

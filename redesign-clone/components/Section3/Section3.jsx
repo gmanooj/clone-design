@@ -52,7 +52,7 @@ export default function Section3({ className = "" }) {
                     Anxiety &amp; Panic Therapy
                   </h3>
                   <p className="font-body font-light text-[14px] sm:text-[15px] md:text-[16px] lg:text-[16.7px] leading-[1.7] text-body/85 m-0 mb-4">
-                    For constant worry, overthinking, and tension in the body. We use CBT and body-oriented tools to ease both the thoughts and the physical stress.
+                    For constant worry, overthinking, and tension in the body. I use CBT and body-oriented tools to ease both the thoughts and the physical stress.
                   </p>
                 </div>
                 <div className="pt-2 md:pt-4 mt-auto">

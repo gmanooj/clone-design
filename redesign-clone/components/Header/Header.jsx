@@ -6,16 +6,16 @@ import NavDropdown from "./NavDropdown";
 import MobileDrawer from "./MobileDrawer";
 
 const practiceLinks = [
-  { name: "About Dr. Reynolds", href: "#about" },
-  { name: "Santa Monica Sanctuary", href: "#office" },
-  { name: "California Telehealth", href: "#office" },
-  { name: "Practice Policies & FAQs", href: "#faqs" },
+  { name: "About Dr. Reynolds", href: "/#about" },
+  { name: "Santa Monica Sanctuary", href: "/#office" },
+  { name: "California Telehealth", href: "/#office" },
+  { name: "Practice Policies & FAQs", href: "/#faqs" },
 ];
 
 const specialtiesLinks = [
-  { name: "Anxiety & Panic", href: "#specialties" },
-  { name: "Trauma & EMDR", href: "#specialties" },
-  { name: "Burnout & Perfectionism", href: "#specialties" },
+  { name: "Anxiety & Panic", href: "/#specialties" },
+  { name: "Trauma & EMDR", href: "/#specialties" },
+  { name: "Burnout & Perfectionism", href: "/#specialties" },
 ];
 
 /**
@@ -67,12 +67,12 @@ export default function Header({ className = "" }) {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
+            {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center">
             <nav className="flex items-center text-right font-[family-name:var(--font-body)]">
               <div>
                 <Link
-                  href="#about"
+                  href="/#about"
                   className="text-[12.5px] lg:text-[13.3px] uppercase tracking-[0.1em] leading-[1.8em] text-ink font-normal hover:opacity-75 transition-opacity whitespace-nowrap"
                 >
                   About
@@ -83,7 +83,7 @@ export default function Header({ className = "" }) {
 
               <div className="ml-[1.5vw] lg:ml-[2.5vw]">
                 <Link
-                  href="#approach"
+                  href="/#approach"
                   className="text-[12.5px] lg:text-[13.3px] uppercase tracking-[0.1em] leading-[1.8em] text-ink font-normal hover:opacity-75 transition-opacity whitespace-nowrap"
                 >
                   Approach
@@ -92,7 +92,7 @@ export default function Header({ className = "" }) {
 
               <div className="ml-[1.5vw] lg:ml-[2.5vw]">
                 <Link
-                  href="#office"
+                  href="/#office"
                   className="text-[12.5px] lg:text-[13.3px] uppercase tracking-[0.1em] leading-[1.8em] text-ink font-normal hover:opacity-75 transition-opacity whitespace-nowrap"
                 >
                   Office
@@ -103,7 +103,7 @@ export default function Header({ className = "" }) {
             {/* Desktop Action CTA */}
             <div className="ml-[1.5vw] lg:ml-[2.5vw]">
               <Link
-                href="#booking"
+                href="/#booking"
                 className="btn-sharp-filled inline-block text-[12.5px] lg:text-[13px] font-semibold tracking-[0.14em] text-on-primary uppercase bg-primary border-2 border-primary rounded-none px-8 py-3.5 transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-primary-hover hover:border-primary-hover hover:-translate-y-[2px] hover:shadow-[0_8px_15px_rgba(168,100,75,0.35)] active:translate-y-0 active:shadow-none cursor-pointer"
               >
                 BOOK NOW
