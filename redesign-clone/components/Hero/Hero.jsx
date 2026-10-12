@@ -20,7 +20,7 @@ export default function Hero({ className = "" }) {
           
           {/* Primary Left Media Asset (Dr. Maya Reynolds Portrait - Sharp Corners + Aesthetic Overlay) */}
           <div className="hero-media-left w-full h-full">
-            <div className="hero-image-landing-1 relative w-full max-w-[340px] aspect-[4/5] mx-auto lg:max-w-none lg:aspect-auto lg:h-full min-h-0 overflow-hidden sharp-corners shadow-sm">
+            <div className="hero-image-landing-1 relative w-full aspect-[4/5] mx-auto lg:max-w-none lg:aspect-auto lg:h-full min-h-0 overflow-hidden sharp-corners shadow-sm">
               <Image
                 src="/images/profile/dr-maya-reynolds-portrait.jpg"
                 alt="Dr. Maya Reynolds, licensed clinical psychologist in Santa Monica, CA"

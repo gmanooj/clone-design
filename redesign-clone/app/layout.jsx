@@ -41,7 +41,7 @@ export const metadata = {
     siteName: "Dr. Maya Reynolds, PsyD",
     images: [
       {
-        url: "/og.jpg",
+        url: "/og-portrait-only.jpg",
         width: 1200,
         height: 630,
         alt: "Dr. Maya Reynolds, PsyD — Therapy in Santa Monica, CA",
@@ -54,7 +54,7 @@ export const metadata = {
     description: "Licensed clinical psychologist in Santa Monica, CA offering anxiety, trauma, EMDR and burnout therapy for adults. In-person sessions and secure California telehealth.",
     images: [
       {
-        url: "/og.jpg",
+        url: "/og-portrait-only.jpg",
         width: 1200,
         height: 630,
         alt: "Dr. Maya Reynolds, PsyD — Therapy in Santa Monica, CA",
