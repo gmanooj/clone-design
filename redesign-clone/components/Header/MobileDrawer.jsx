@@ -59,15 +59,39 @@ export default function MobileDrawer({
 
       window.addEventListener("keydown", handleKeyDown);
 
+      const menuBtn = menuButtonRef?.current;
+
       return () => {
         document.body.style.overflow = prevOverflow;
         window.removeEventListener("keydown", handleKeyDown);
-        if (menuButtonRef?.current) {
-          menuButtonRef.current.focus();
+        if (menuBtn) {
+          menuBtn.focus();
         }
       };
     }
   }, [isOpen, onClose, menuButtonRef]);
+
+  const handleDrawerNavClick = (sectionId) => (e) => {
+    e.preventDefault();
+    onClose();
+    if (typeof window !== "undefined") {
+      if (window.__scrollToSection) {
+        window.__scrollToSection(sectionId);
+      } else if (window.__lenis) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          window.__lenis.scrollTo(el, {
+            offset: 0,
+            duration: 3.5,
+            easing: (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2),
+            immediate: false,
+            lock: true,
+            force: true,
+          });
+        }
+      }
+    }
+  };
 
   return (
     <div
@@ -105,7 +129,8 @@ export default function MobileDrawer({
             <div>
               <Link
                 href="/#about"
-                onClick={onClose}
+                scroll={false}
+                onClick={handleDrawerNavClick("about")}
                 className="font-heading text-[26px] sm:text-[30px] uppercase tracking-[0.06em] text-ink font-light hover:text-accent transition-colors"
               >
                 About
@@ -125,7 +150,8 @@ export default function MobileDrawer({
             <div>
               <Link
                 href="/#approach"
-                onClick={onClose}
+                scroll={false}
+                onClick={handleDrawerNavClick("approach")}
                 className="font-heading text-[26px] sm:text-[30px] uppercase tracking-[0.06em] text-ink font-light hover:text-accent transition-colors"
               >
                 Approach
@@ -135,7 +161,8 @@ export default function MobileDrawer({
             <div>
               <Link
                 href="/#office"
-                onClick={onClose}
+                scroll={false}
+                onClick={handleDrawerNavClick("office")}
                 className="font-heading text-[26px] sm:text-[30px] uppercase tracking-[0.06em] text-ink font-light hover:text-accent transition-colors"
               >
                 Office
@@ -159,7 +186,8 @@ export default function MobileDrawer({
                   <Link
                     key={item.name}
                     href={item.href.startsWith("#") ? `/${item.href}` : item.href}
-                    onClick={onClose}
+                    scroll={false}
+                    onClick={handleDrawerNavClick(item.href.replace(/^\/?#/, ""))}
                     className="font-heading text-[20px] sm:text-[24px] uppercase tracking-[0.06em] text-ink font-light hover:text-accent transition-colors"
                   >
                     {item.name}
@@ -174,7 +202,8 @@ export default function MobileDrawer({
       <div className="px-[8vw] pb-10 flex-shrink-0 text-center">
         <Link
           href="/#booking"
-          onClick={onClose}
+          scroll={false}
+          onClick={handleDrawerNavClick("booking")}
           className="btn-sharp-filled inline-block w-full max-w-[280px] text-[13px] font-semibold tracking-[0.14em] text-on-primary uppercase bg-primary border-2 border-primary rounded-none py-3.5 transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-primary-hover hover:border-primary-hover hover:-translate-y-[2px] hover:shadow-[0_8px_15px_rgba(168,100,75,0.35)] active:translate-y-0 active:shadow-none cursor-pointer"
         >
           BOOK NOW

@@ -5,10 +5,6 @@ import Image from "next/image";
 import ImageReveal from "@/components/common/ImageReveal";
 import UnderlineLink from "@/components/common/UnderlineLink";
 
-/**
- * Section 7: Narrative Transition ("Honoring Where You've Been").
- * Visual storytelling linking therapeutic history to future growth.
- */
 export default function Section7({ className = "" }) {
   return (
     <section
@@ -41,10 +37,22 @@ export default function Section7({ className = "" }) {
                   About Dr. Maya Reynolds
                 </p>
                 <h2 className="font-heading font-light text-[28px] sm:text-[36px] md:text-[42px] leading-[1.25] tracking-[-0.01em] text-ink mb-4">
-                  Meet Dr. Maya Reynolds, Psychologist in Santa Monica
+                  Meet Dr.{" "}
+                  <span
+                    style={{
+                      fontFamily: "var(--font-wedding-day), 'WeddingdayPersonal', cursive",
+                    }}
+                    className="font-normal text-accent inline-block text-[1.25em] md:text-[1.35em] leading-none transform translate-y-[2px] md:translate-y-[4px]"
+                  >
+                    Maya Reynolds
+                  </span>
+                  , Psychologist in Santa Monica
                 </h2>
+                <p className="font-body font-light text-[14px] sm:text-[15.5px] leading-[1.75] text-body mb-4">
+                  I&apos;m a licensed clinical psychologist based in Santa Monica, California, offering therapy for adults who feel overwhelmed by anxiety, stress, or the lingering effects of past experiences. Many of the people I work with are high-achieving, thoughtful, and self-aware—but internally feel exhausted, stuck in overthinking, or emotionally on edge.
+                </p>
                 <p className="font-body font-light text-[14px] sm:text-[15.5px] leading-[1.75] text-body mb-6">
-                  I&apos;m a licensed clinical psychologist in Santa Monica, California, offering therapy for adults who feel overwhelmed by anxiety, stress, or the lingering effects of past experiences. My approach is warm, collaborative, and grounded, using CBT, EMDR, mindfulness-based practices, and body-oriented techniques, in person in Santa Monica and by secure telehealth across California. I believe therapy works best when you feel respected, understood, and actively involved.
+                  I take a warm, collaborative, and grounded approach. Sessions are structured enough to feel supportive, while still leaving space for reflection and depth. I believe therapy works best when clients feel respected, understood, and actively involved in the process—helping you develop insight, resilience, and a stronger relationship with yourself over time.
                 </p>
                 <div>
                   <UnderlineLink

@@ -5,10 +5,6 @@ import Image from "next/image";
 import ImageReveal from "@/components/common/ImageReveal";
 import UnderlineLink from "@/components/common/UnderlineLink";
 
-/**
- * Section 2: Narrative Philosophy & Hope.
- * Side-by-side editorial layout presenting the practice's empathetic philosophy.
- */
 export default function Section2({ className = "" }) {
   return (
     <section
@@ -19,8 +15,6 @@ export default function Section2({ className = "" }) {
       <div className="w-full px-6 py-10 md:px-8 md:py-10 lg:px-0 lg:py-[calc(70vmax/10)]">
         <div className="w-full">
           <div className="fluid-grid-sec2 w-full">
-            
-            {/* Headline Block (Eyebrow + H2) */}
             <div className="sec2-headline-block">
               <div className="h-full flex flex-col justify-start md:justify-center">
                 <p className="font-body text-[11px] sm:text-[14px] font-semibold leading-[1.8] tracking-[0.14em] uppercase text-accent mb-3">

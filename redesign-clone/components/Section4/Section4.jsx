@@ -3,10 +3,6 @@
 import React from "react";
 import Image from "next/image";
 
-/**
- * Section 4: Full-bleed Atmospheric Quote Banner.
- * Emphasizes validation and psychological safety with responsive typography.
- */
 export default function Section4({ className = "" }) {
   return (
     <section
@@ -14,7 +10,7 @@ export default function Section4({ className = "" }) {
       aria-label="Quote Banner"
       className={`relative w-full overflow-hidden min-h-[66vh] flex items-center bg-ink ${className}`}
     >
-      {/* Background Image Container with atmospheric golden-hour coastal mist */}
+      {/* Background quote banner image */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
         <Image
           src="/images/sections/quote-pacific-shoreline.jpg"
@@ -24,9 +20,7 @@ export default function Section4({ className = "" }) {
           className="object-cover object-center block"
           style={{ objectPosition: "50% 50%" }}
         />
-        {/* Soft pale peach aesthetic tone */}
         <div className="media-overlay" />
-        {/* Subtle cinematic dark scrim for white typography legibility */}
         <div className="absolute inset-0 bg-gradient-to-b from-scrim/45 via-scrim/40 to-scrim/55" />
       </div>
 

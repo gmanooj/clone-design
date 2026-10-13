@@ -7,18 +7,15 @@ import Link from "next/link";
 const officeImages = [
   {
     src: "/images/office/office2.jpeg",
-    alt: "Quiet, light-filled Santa Monica therapy office with bookshelf and armchair",
-    caption: "Natural light",
+    alt: "Quiet, light-filled Santa Monica therapy office with natural light, books, and armchair",
+    caption: "Natural Light & Grounding Space",
+    subtext: "A quiet, private setting designed to feel calm and grounding.",
   },
   {
     src: "/images/office/office1.jpeg",
-    alt: "Sunlit Santa Monica therapy office with exposed brick and comfortable sofa",
-    caption: "Calm and uncluttered",
-  },
-  {
-    src: "/images/office/santa-monica-office-sanctuary.jpg",
-    alt: "Quiet Santa Monica therapy office with comfortable seating and natural lighting",
-    caption: "Comfortable and private",
+    alt: "Sunlit Santa Monica therapy office with exposed brick and comfortable seating",
+    caption: "Comfortable & Uncluttered Environment",
+    subtext: "Clients often share that the space itself helps them feel more at ease.",
   },
 ];
 
@@ -128,20 +125,20 @@ export default function OurOffice({ className = "" }) {
           </p>
         </div>
 
-        {/* 3-Image Architectural & Interior Gallery */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-8 lg:gap-8 mb-16">
+        {/* Authentic Office Photography Gallery */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-16">
           {officeImages.map((img, index) => (
             <div
               key={index}
               className="group flex flex-col bg-white border border-line overflow-hidden shadow-xs hover:shadow-md transition-shadow duration-300"
             >
               {/* Image Frame with Aspect Ratio & Sharp Edges */}
-              <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary">
+              <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] overflow-hidden bg-secondary">
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover object-center block group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                 />
                 <div className="media-overlay" />
@@ -150,9 +147,12 @@ export default function OurOffice({ className = "" }) {
               {/* Text Card Content */}
               <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between bg-white">
                 <div>
-                  <h3 className="font-heading font-normal text-[20px] sm:text-[22px] leading-[1.3] text-ink m-0">
+                  <h3 className="font-heading font-normal text-[20px] sm:text-[23px] leading-[1.3] text-ink m-0 mb-2">
                     {img.caption}
                   </h3>
+                  <p className="font-body font-light text-[14px] sm:text-[15px] leading-[1.7] text-body/80 m-0">
+                    {img.subtext}
+                  </p>
                 </div>
               </div>
             </div>
@@ -195,7 +195,7 @@ export default function OurOffice({ className = "" }) {
               href="#booking"
               className="btn-sharp-filled"
             >
-              Schedule a consultation
+              Request an appointment
             </Link>
           </div>
         </div>

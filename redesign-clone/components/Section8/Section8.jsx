@@ -3,10 +3,6 @@
 import React from "react";
 import UnderlineLink from "@/components/common/UnderlineLink";
 
-/**
- * Section 8: Specialties Grid.
- * Direct editorial layout presenting specialized therapy modalities on a clean white canvas.
- */
 export default function Section8({ className = "" }) {
   return (
     <section

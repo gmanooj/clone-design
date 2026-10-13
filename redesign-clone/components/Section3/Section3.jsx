@@ -5,10 +5,6 @@ import Image from "next/image";
 import ImageReveal from "@/components/common/ImageReveal";
 import UnderlineLink from "@/components/common/UnderlineLink";
 
-/**
- * Section 3: Demographic Specializations ("Who We Help").
- * Editorial grid presenting specialized focal areas without cards or borders.
- */
 export default function Section3({ className = "" }) {
   return (
     <section

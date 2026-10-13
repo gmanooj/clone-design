@@ -7,6 +7,30 @@ import Link from "next/link";
  * Desktop navigation dropdown with clean hover transitions and alignment.
  */
 export default function NavDropdown({ title, links, id }) {
+  const handleDropdownClick = (href) => (e) => {
+    const targetId = href.replace(/^\/?#/, "");
+    if (targetId) {
+      e.preventDefault();
+      if (typeof window !== "undefined") {
+        if (window.__scrollToSection) {
+          window.__scrollToSection(targetId);
+        } else if (window.__lenis) {
+          const el = document.getElementById(targetId);
+          if (el) {
+            window.__lenis.scrollTo(el, {
+              offset: 0,
+              duration: 3.5,
+              easing: (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2),
+              immediate: false,
+              lock: true,
+              force: true,
+            });
+          }
+        }
+      }
+    }
+  };
+
   return (
     <div className="ml-[1.5vw] lg:ml-[2.5vw] relative group py-0">
       <button
@@ -25,6 +49,8 @@ export default function NavDropdown({ title, links, id }) {
             <div key={item.name}>
               <Link
                 href={item.href.startsWith("#") ? `/${item.href}` : item.href}
+                scroll={false}
+                onClick={handleDropdownClick(item.href)}
                 className="inline-block text-[11px] xl:text-[11.5px] uppercase tracking-[0.08em] text-ink font-normal hover:border-b hover:border-ink pb-[1px] transition-all duration-150 whitespace-nowrap"
               >
                 {item.name}

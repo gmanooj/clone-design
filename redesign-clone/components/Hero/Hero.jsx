@@ -4,10 +4,6 @@ import React from "react";
 import Image from "next/image";
 import UnderlineLink from "@/components/common/UnderlineLink";
 
-/**
- * Above-the-fold Hero section introducing the core brand promise,
- * featuring fluid editorial grid, aesthetic image overlay, and pure typography.
- */
 export default function Hero({ className = "" }) {
   return (
     <section
@@ -17,12 +13,11 @@ export default function Hero({ className = "" }) {
     >
       <div className="w-full px-6 py-10 md:px-8 md:py-10 lg:px-0 lg:py-0">
         <div className="fluid-grid-hero w-full h-auto min-h-0 lg:min-h-[688px]">
-          
-          {/* Primary Left Media Asset (Dr. Maya Reynolds Portrait - Sharp Corners + Aesthetic Overlay) */}
+          {/* Therapist portrait */}
           <div className="hero-media-left w-full h-full">
             <div className="hero-image-landing-1 relative w-full aspect-[4/5] mx-auto lg:max-w-none lg:aspect-auto lg:h-full min-h-0 overflow-hidden sharp-corners shadow-sm">
               <Image
-                src="/images/profile/dr-maya-reynolds-portrait.jpg"
+                src="/images/profile/dr-maya-reynolds.png"
                 alt="Dr. Maya Reynolds, licensed clinical psychologist in Santa Monica, CA"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -59,18 +54,18 @@ export default function Hero({ className = "" }) {
             </p>
           </div>
 
-          {/* Action Row / Underline Link (Single Clean CTA) */}
+          {/* Primary CTA */}
           <div className="hero-cta-block flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
             <UnderlineLink href="#approach" aria-label="Explore my approach to therapy in Santa Monica">
               Explore my approach
             </UnderlineLink>
           </div>
 
-          {/* Secondary Right Accent Media Asset (Sharp Corners + Aesthetic Overlay) - Hidden on tablet/mobile */}
+          {/* Office media asset */}
           <div className="hero-media-right hidden lg:block w-full h-full">
             <div className="hero-image-landing-2 relative w-full h-full min-h-0 overflow-hidden">
               <Image
-                src="/images/office/santa-monica-office-brick.jpg"
+                src="/images/office/office1.jpeg"
                 alt="Quiet, light-filled Santa Monica therapy office with exposed brick wall"
                 fill
                 sizes="(max-width: 1024px) 50vw, 20vw"

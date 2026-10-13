@@ -5,13 +5,6 @@ import Link from "next/link";
 import NavDropdown from "./NavDropdown";
 import MobileDrawer from "./MobileDrawer";
 
-const practiceLinks = [
-  { name: "About Dr. Reynolds", href: "/#about" },
-  { name: "Santa Monica Sanctuary", href: "/#office" },
-  { name: "California Telehealth", href: "/#office" },
-  { name: "Practice Policies & FAQs", href: "/#faqs" },
-];
-
 const specialtiesLinks = [
   { name: "Anxiety & Panic", href: "/#specialties" },
   { name: "Trauma & EMDR", href: "/#specialties" },
@@ -40,6 +33,46 @@ export default function Header({ className = "" }) {
     setActiveFolder(null);
   };
 
+  const handleNavClick = (sectionId) => (e) => {
+    e.preventDefault();
+    closeMenu();
+    if (typeof window !== "undefined") {
+      if (window.__scrollToSection) {
+        window.__scrollToSection(sectionId);
+      } else if (window.__lenis) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          window.__lenis.scrollTo(el, {
+            offset: 0,
+            duration: 5.0,
+            easing: (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2),
+            immediate: false,
+            lock: true,
+            force: true,
+          });
+        }
+      }
+    }
+  };
+
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    closeMenu();
+    if (typeof window !== "undefined") {
+      if (window.__scrollToTop) {
+        window.__scrollToTop();
+      } else if (window.__lenis) {
+        window.__lenis.scrollTo(0, {
+          duration: 3.5,
+          easing: (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2),
+          immediate: false,
+          lock: true,
+          force: true,
+        });
+      }
+    }
+  };
+
   return (
     <>
       <header
@@ -54,7 +87,8 @@ export default function Header({ className = "" }) {
           <div className="flex-1 min-w-0 leading-none mr-2 sm:mr-4">
             <Link
               href="/"
-              onClick={closeMenu}
+              scroll={false}
+              onClick={handleLogoClick}
               className="inline-block leading-tight group max-w-full"
               aria-label="Dr. Maya Reynolds, PsyD"
             >
@@ -73,6 +107,8 @@ export default function Header({ className = "" }) {
               <div>
                 <Link
                   href="/#about"
+                  scroll={false}
+                  onClick={handleNavClick("about")}
                   className="text-[12.5px] lg:text-[13.3px] uppercase tracking-[0.1em] leading-[1.8em] text-ink font-normal hover:opacity-75 transition-opacity whitespace-nowrap"
                 >
                   About
@@ -84,6 +120,8 @@ export default function Header({ className = "" }) {
               <div className="ml-[1.5vw] lg:ml-[2.5vw]">
                 <Link
                   href="/#approach"
+                  scroll={false}
+                  onClick={handleNavClick("approach")}
                   className="text-[12.5px] lg:text-[13.3px] uppercase tracking-[0.1em] leading-[1.8em] text-ink font-normal hover:opacity-75 transition-opacity whitespace-nowrap"
                 >
                   Approach
@@ -93,6 +131,8 @@ export default function Header({ className = "" }) {
               <div className="ml-[1.5vw] lg:ml-[2.5vw]">
                 <Link
                   href="/#office"
+                  scroll={false}
+                  onClick={handleNavClick("office")}
                   className="text-[12.5px] lg:text-[13.3px] uppercase tracking-[0.1em] leading-[1.8em] text-ink font-normal hover:opacity-75 transition-opacity whitespace-nowrap"
                 >
                   Office
@@ -104,6 +144,8 @@ export default function Header({ className = "" }) {
             <div className="ml-[1.5vw] lg:ml-[2.5vw]">
               <Link
                 href="/#booking"
+                scroll={false}
+                onClick={handleNavClick("booking")}
                 className="btn-sharp-filled inline-block text-[12.5px] lg:text-[13px] font-semibold tracking-[0.14em] text-on-primary uppercase bg-primary border-2 border-primary rounded-none px-8 py-3.5 transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-primary-hover hover:border-primary-hover hover:-translate-y-[2px] hover:shadow-[0_8px_15px_rgba(168,100,75,0.35)] active:translate-y-0 active:shadow-none cursor-pointer"
               >
                 BOOK NOW

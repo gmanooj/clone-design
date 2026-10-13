@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "How do we get started?",
     answer:
-      "Use the Schedule a consultation button to reach out. Whether you choose in-person sessions in Santa Monica or telehealth in California, we can see together whether I'm a good fit.",
+      "Reach out through the consultation booking form. Whether you choose in-person sessions in Santa Monica or telehealth in California, we can see together whether I'm a good fit.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function FAQ({ className = "" }) {
                 href="#booking"
                 className="btn-sharp-filled inline-block text-[12px] sm:text-[12.5px] font-semibold tracking-[0.14em] uppercase text-on-primary bg-primary border-2 border-primary rounded-none px-7 py-3.5 shadow-sm transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-primary-hover hover:border-primary-hover hover:-translate-y-[2px] active:translate-y-0 cursor-pointer"
               >
-                Schedule a consultation
+                Get in touch
               </Link>
             </div>
           </div>

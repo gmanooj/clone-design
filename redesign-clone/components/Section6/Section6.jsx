@@ -5,10 +5,6 @@ import Image from "next/image";
 import ImageReveal from "@/components/common/ImageReveal";
 import UnderlineLink from "@/components/common/UnderlineLink";
 
-/**
- * Section 6: Process & Philosophy ("How We Work").
- * Multi-column editorial layout detailing client-centered care.
- */
 export default function Section6({ className = "" }) {
   return (
     <section

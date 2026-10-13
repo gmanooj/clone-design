@@ -21,11 +21,6 @@ const specialtiesColumn2 = [
   "Mindfulness-Based Practices",
 ];
 
-/**
- * Section 5: Areas of Expertise.
- * Balanced 2-column editorial list with equal vertical spacing,
- * exact horizontal alignment, and animated interactive underline links.
- */
 export default function Section5({ className = "" }) {
   return (
     <section
@@ -36,8 +31,6 @@ export default function Section5({ className = "" }) {
       <div className="w-full relative z-10 px-6 py-12 md:px-8 md:py-12 lg:px-0 lg:py-[calc(80vmax/10)]">
         <div className="w-full">
           <div className="fluid-grid-sec5 w-full">
-            
-            {/* Title: Comprehensive Psychological Care Rooted in Science & Warmth */}
             <div className="sec5-title-block">
               <div className="h-full flex flex-col justify-start">
                 <span className="font-sans text-[11px] sm:text-[12px] uppercase tracking-[0.2em] text-muted font-medium mb-3 block">

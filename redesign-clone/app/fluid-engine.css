@@ -789,6 +789,20 @@
   }
 }
 
+.sec9-content-center {
+  grid-area: 8/2/24/10;
+  z-index: 10;
+  position: relative;
+  min-height: 480px;
+}
+@media (min-width: 1024px) {
+  .sec9-content-center {
+    grid-area: 1/6/17/17;
+    z-index: 10;
+    min-height: 520px;
+  }
+}
+
 .sec9-eyebrow-block {
   grid-area: 8/2/10/10;
   z-index: 0;
